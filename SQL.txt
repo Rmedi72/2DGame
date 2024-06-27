@@ -1,0 +1,10 @@
+
+SELECT * FROM products WHERE price < 50000 AND available = 1;
+
+SELECT * FROM products WHERE available = 1 ORDER BY price DESC LIMIT 3;
+
+SELECT * FROM products WHERE category = 1 ORDER BY name ASC;
+
+SELECT category, COUNT(id) AS num_of_products FROM products GROUP BY category;
+
+SELECT SUM(price) AS total_unavailable_value FROM products WHERE available = 0;
